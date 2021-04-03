@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+:root{
+    --line-border-fill: #A70042;
+    --line-border-empty: #e0e0e0; 
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Muli',sans-serif;
+  background-color: #f6f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container{
+  text-align: center;
+}
+
+h1{
+  font-family: 'Caveat', cursive;
+  color: var(--line-border-fill);
+  font-size: 60px;
+  margin-bottom: 100px;
+}
+.progress-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  position: relative;
+  max-width: 100%;
+  width: 1400px;
+}
+
+.progress-container::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 100%;
+  background-color: var(--line-border-empty);
+  z-index: -1;
+}
+
+.progress{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 0%;
+  background-color: var(--line-border-fill);
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle{
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--line-border-empty);
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+
+.circle.active.one{
+  border-color: var(--line-border-fill);
+  background-image: url('https://i.pinimg.com/originals/9d/db/7b/9ddb7bbad72ae16398e8906b1e59d4f6.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.circle.active.two{
+  border-color: var(--line-border-fill);
+  background-image: url('https://i.pinimg.com/originals/e4/72/f6/e472f650ee4e631bbd1514eface984e7.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition-delay: 0.4s;
+}
+
+.circle.active.three{
+  border-color: var(--line-border-fill);
+  background-image: url('https://i.pinimg.com/originals/e5/65/a0/e565a0e3f7a26dbe1d86a56c7001f825.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition-delay: 0.4s;
+}
+
+.circle.active.four{
+  border-color: var(--line-border-fill);
+  background-image: url('https://thumbs.gfycat.com/CrazyAnimatedArmyworm-size_restricted.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition-delay: 0.4s;
+}
+
+.btn{
+  border: none;
+  background-color: var(--line-border-fill);
+  padding: 14px 40px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  margin: 10px;
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+}
+
+.btn:active{
+  transform: scale(0.98);
+}
+
+.btn:disabled{
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
